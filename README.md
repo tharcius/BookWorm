@@ -7,7 +7,10 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## Sobre o projeto
+# Book Manager
+
+## Sobre o projeto 
+Gestão de livros
 
 ## Documentação
 
@@ -18,9 +21,15 @@
 ### Roadmap
 - Preparando o ambiente de desenvolvimento instalando plugins uteis:
   Artisan Pint, PHPInsights.
+- Criando sistema de autenticação com o Sanctum
 
 ### TODO
-- Fazer uma lista com as tarefas a serem feitas
+- Criar CRUD de Users
+- Criar CRUD de Books
+- Criar CRUD de Authors
+- Configurar Docker no projeto
+- Construir coleção do PostMan para testes
+- Criar testes automatizados
 
 ## License
 
