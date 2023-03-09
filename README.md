@@ -21,13 +21,14 @@ Gestão de livros
 ### Roadmap
 - Preparando o ambiente de desenvolvimento instalando plugins uteis:
   Artisan Pint, PHPInsights.
-- Criando sistema de autenticação com o Sanctum
+- Criando sistema de autenticação com o Sanctum.
+- Preparar o dockerfile e docker-compose.yml para esse projeto.
 
 ### TODO
 - Criar CRUD de Users
 - Criar CRUD de Books
 - Criar CRUD de Authors
-- Configurar Docker no projeto
+- ~~Configurar Docker no projeto~~
 - Construir coleção do PostMan para testes
 - Criar testes automatizados
 
