@@ -19,7 +19,7 @@ class BookFactory extends Factory
     {
         return [
             'title' => fake()->name,
-            'publication_date' => fake()->dateTime(),
+            'publication_date' => fake()->dateTime()->format('d/m/Y'),
             'isbn' => fake()->unique()->numerify('#############'),
             'author_id' => Author::factory(),
         ];

@@ -16,9 +16,10 @@ class AuthorFactory extends Factory
      */
     public function definition(): array
     {
+
         return [
             'name' => fake()->name(),
-            'birthdate' => fake()->dateTimeBetween('-50 years', '-18 years'),
+            'birthdate' =>fake()->dateTimeBetween('-50 years', '-18 years')->format('d/m/Y'),
             'nationality' => fake()->country(),
         ];
     }

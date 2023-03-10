@@ -46,6 +46,34 @@ class AuthController extends Controller
         return response()->json([], 204);
     }
 
+    public function user(): JsonResponse
+    {
+        $me = auth()->user()->only(
+            'name',
+            'email',
+        );
+
+        if (! $me) {
+            return response()->json(
+                [
+                    'data' => null,
+                    'status' => 'error',
+                    'message' => 'Fail on search author',
+                ],
+                self::HTTP_UNPROCESSABLE_ENTITY
+            );
+        }
+
+        return response()->json(
+            [
+                'data' => $me,
+                'status' => 'success',
+                'message' => 'It\'s me honey.',
+            ],
+            self::HTTP_CREATE_OK
+        );
+    }
+
     private function revokeTokens(): void
     {
         auth()->user()->tokens()->delete();

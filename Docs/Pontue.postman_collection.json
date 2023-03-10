@@ -1,0 +1,2164 @@
+{
+	"info": {
+		"_postman_id": "e88c6f44-1b66-4500-b883-bab4c79029e4",
+		"name": "Pontue",
+		"description": "HAR To Postman Generated Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "321556"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "localhost:8000/login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/login?email=admin@email.com&password=administrator",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"login"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "admin@email.com"
+								},
+								{
+									"key": "password",
+									"value": "administrator"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": " / 401",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL1}}/login",
+									"host": [
+										"{{baseURL1}}"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.23.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Mar 2023 14:09:28 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"status\": \"error\",\n \"message\": \"Invalid credentials\"\n}"
+						}
+					]
+				},
+				{
+					"name": "localhost:8000/logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 2|1v0PHwZXiDMdy5754SlWY10to9l4hptMvIsoEIr0"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/logout",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "no-content / 204",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer 2|1v0PHwZXiDMdy5754SlWY10to9l4hptMvIsoEIr0"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL1}}/api/logout",
+									"host": [
+										"{{baseURL1}}"
+									],
+									"path": [
+										"api",
+										"logout"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.23.3"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Mar 2023 13:54:41 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "localhost:8000/user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 2|1v0PHwZXiDMdy5754SlWY10to9l4hptMvIsoEIr0"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/user",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "no-content / 204",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer 2|1v0PHwZXiDMdy5754SlWY10to9l4hptMvIsoEIr0"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL1}}/api/logout",
+									"host": [
+										"{{baseURL1}}"
+									],
+									"path": [
+										"api",
+										"logout"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.23.3"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Mar 2023 13:54:41 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "localhost:8000/users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 2|1v0PHwZXiDMdy5754SlWY10to9l4hptMvIsoEIr0"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/users",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "successfully / 200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer 2|1v0PHwZXiDMdy5754SlWY10to9l4hptMvIsoEIr0"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL1}}/users",
+									"host": [
+										"{{baseURL1}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.23.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Mar 2023 14:14:59 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"data\": [\n  {\n   \"id\": 1,\n   \"name\": \"Tharcius\",\n   \"email\": \"tharcius@email.com\"\n  }\n ],\n \"status\": \"success\",\n \"message\": \"Students retrieved successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "localhost:8000/users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 2|1v0PHwZXiDMdy5754SlWY10to9l4hptMvIsoEIr0"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/users",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "created / 201",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer 2|1v0PHwZXiDMdy5754SlWY10to9l4hptMvIsoEIr0"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL1}}/users",
+									"host": [
+										"{{baseURL1}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.23.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Mar 2023 00:35:10 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"data\": {\n  \"id\": 12,\n  \"name\": \"Remo Jhon Lupin\",\n  \"email\": \"lupin.remo@hogwarts.wiz\"\n },\n \"status\": \"success\",\n \"message\": \"User created successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "localhost:8000/users/9",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 2|1v0PHwZXiDMdy5754SlWY10to9l4hptMvIsoEIr0"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/users/9",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"users",
+								"9"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "created / 201",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer 2|1v0PHwZXiDMdy5754SlWY10to9l4hptMvIsoEIr0"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL1}}/users/9",
+									"host": [
+										"{{baseURL1}}"
+									],
+									"path": [
+										"users",
+										"9"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.23.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Mar 2023 01:11:33 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"data\": {\n  \"id\": 9,\n  \"name\": \"Newton Artemis Fido Scamander\",\n  \"email\": \"scamander.newton@hogwarts.wiz\"\n },\n \"status\": \"success\",\n \"message\": \"User found successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "localhost:8000/users/9",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 2|1v0PHwZXiDMdy5754SlWY10to9l4hptMvIsoEIr0"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/users/9",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"users",
+								"9"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "successfully / 200",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer 2|1v0PHwZXiDMdy5754SlWY10to9l4hptMvIsoEIr0"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL1}}/users/9",
+									"host": [
+										"{{baseURL1}}"
+									],
+									"path": [
+										"users",
+										"9"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.23.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Mar 2023 01:11:24 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"data\": {\n  \"id\": 9,\n  \"name\": \"Newton Artemis Fido Scamander\",\n  \"email\": \"scamander.newton@hogwarts.wiz\"\n },\n \"status\": \"success\",\n \"message\": \"User updated successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "localhost:8000/users/7",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 2|1v0PHwZXiDMdy5754SlWY10to9l4hptMvIsoEIr0"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/users/7",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"users",
+								"7"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": " / 422",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer 2|1v0PHwZXiDMdy5754SlWY10to9l4hptMvIsoEIr0"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL1}}/users/7",
+									"host": [
+										"{{baseURL1}}"
+									],
+									"path": [
+										"users",
+										"7"
+									]
+								}
+							},
+							"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.23.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Mar 2023 01:13:45 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"status\": \"error\",\n \"message\": \"Fail on delete User\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Authors",
+			"item": [
+				{
+					"name": "localhost:8000/authors",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 2|1v0PHwZXiDMdy5754SlWY10to9l4hptMvIsoEIr0"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/authors",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"authors"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "successfully / 200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer 2|1v0PHwZXiDMdy5754SlWY10to9l4hptMvIsoEIr0"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL1}}/authors",
+									"host": [
+										"{{baseURL1}}"
+									],
+									"path": [
+										"authors"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.23.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Mar 2023 03:49:25 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"data\": [\n  {\n   \"id\": 1,\n   \"name\": \"Leola Hessel\",\n   \"birthdate\": \"01/09/1988\",\n   \"nationality\": \"French Guiana\"\n  },\n  {\n   \"id\": 2,\n   \"name\": \"Nannie Batz\",\n   \"birthdate\": \"11/11/1980\",\n   \"nationality\": \"China\"\n  },\n  {\n   \"id\": 3,\n   \"name\": \"Mitchel Gerlach\",\n   \"birthdate\": \"10/08/1978\",\n   \"nationality\": \"Yemen\"\n  },\n  {\n   \"id\": 4,\n   \"name\": \"Buster Labadie\",\n   \"birthdate\": \"01/05/1993\",\n   \"nationality\": \"Panama\"\n  },\n  {\n   \"id\": 5,\n   \"name\": \"Prof. Elsie White\",\n   \"birthdate\": \"20/09/1982\",\n   \"nationality\": \"Saint Helena\"\n  },\n  {\n   \"id\": 6,\n   \"name\": \"Ms. Hassie Mann Sr.\",\n   \"birthdate\": \"21/04/1975\",\n   \"nationality\": \"Anguilla\"\n  },\n  {\n   \"id\": 7,\n   \"name\": \"Francisco Maggio\",\n   \"birthdate\": \"26/06/1978\",\n   \"nationality\": \"Bouvet Island (Bouvetoya)\"\n  },\n  {\n   \"id\": 8,\n   \"name\": \"Pete Gislason Jr.\",\n   \"birthdate\": \"11/02/1974\",\n   \"nationality\": \"Burkina Faso\"\n  },\n  {\n   \"id\": 9,\n   \"name\": \"Dr. Adah Bins\",\n   \"birthdate\": \"14/01/1983\",\n   \"nationality\": \"Finland\"\n  },\n  {\n   \"id\": 10,\n   \"name\": \"Ms. Myra Collins IV\",\n   \"birthdate\": \"06/06/1997\",\n   \"nationality\": \"Gabon\"\n  },\n  {\n   \"id\": 11,\n   \"name\": \"Cho Chang\",\n   \"birthdate\": \"07/11/1979\",\n   \"nationality\": \"britanica\"\n  }\n ],\n \"status\": \"success\",\n \"message\": \"Students retrieved successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "localhost:8000/authors",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 2|1v0PHwZXiDMdy5754SlWY10to9l4hptMvIsoEIr0"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/authors",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"authors"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "created / 201",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer 2|1v0PHwZXiDMdy5754SlWY10to9l4hptMvIsoEIr0"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL1}}/authors",
+									"host": [
+										"{{baseURL1}}"
+									],
+									"path": [
+										"authors"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.23.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Mar 2023 03:48:34 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"data\": {\n  \"name\": \"Cho Chang\",\n  \"birthdate\": \"07/11/1979\",\n  \"nationality\": \"britanica\"\n },\n \"status\": \"success\",\n \"message\": \"Author created successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "localhost:8000/authors/11",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 2|1v0PHwZXiDMdy5754SlWY10to9l4hptMvIsoEIr0"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/authors/11",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"authors",
+								"11"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "created / 201",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer 2|1v0PHwZXiDMdy5754SlWY10to9l4hptMvIsoEIr0"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL1}}/authors/11",
+									"host": [
+										"{{baseURL1}}"
+									],
+									"path": [
+										"authors",
+										"11"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.23.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Mar 2023 03:50:37 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"data\": {\n  \"id\": 11,\n  \"name\": \"Cho Chang\",\n  \"birthdate\": \"07/11/1979\",\n  \"nationality\": \"britanica\"\n },\n \"status\": \"success\",\n \"message\": \"Author found successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "localhost:8000/authors/9",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 2|1v0PHwZXiDMdy5754SlWY10to9l4hptMvIsoEIr0"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/authors/9",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"authors",
+								"9"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "successfully / 200",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer 2|1v0PHwZXiDMdy5754SlWY10to9l4hptMvIsoEIr0"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL1}}/authors/9",
+									"host": [
+										"{{baseURL1}}"
+									],
+									"path": [
+										"authors",
+										"9"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.23.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Mar 2023 04:12:07 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"data\": {\n  \"id\": 9,\n  \"name\": \"Simas Finnigan\",\n  \"birthdate\": \"29/05/1980\",\n  \"nationality\": \"irlandês\"\n },\n \"status\": \"success\",\n \"message\": \"Author updated successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "localhost:8000/authors/7",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 2|1v0PHwZXiDMdy5754SlWY10to9l4hptMvIsoEIr0"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/authors/7",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"authors",
+								"7"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": " / 422",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer 2|1v0PHwZXiDMdy5754SlWY10to9l4hptMvIsoEIr0"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL1}}/authors/7",
+									"host": [
+										"{{baseURL1}}"
+									],
+									"path": [
+										"authors",
+										"7"
+									]
+								}
+							},
+							"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.23.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Mar 2023 04:12:01 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"status\": \"error\",\n \"message\": \"Fail on delete Author\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Books",
+			"item": [
+				{
+					"name": "localhost:8000/books",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 2|1v0PHwZXiDMdy5754SlWY10to9l4hptMvIsoEIr0"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/books",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "successfully / 200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer 2|1v0PHwZXiDMdy5754SlWY10to9l4hptMvIsoEIr0"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL1}}/books",
+									"host": [
+										"{{baseURL1}}"
+									],
+									"path": [
+										"books"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.23.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Mar 2023 05:03:23 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "53"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"data\": [\n  {\n   \"id\": 1,\n   \"title\": \"Animais Fantásticos\",\n   \"publication_date\": \"1998-01-13T00:00:00.000000Z\",\n   \"isbn\": \"9324897489415\",\n   \"author\": \"Cho Chang\"\n  },\n  {\n   \"id\": 2,\n   \"title\": \"Animais Fantásticos\",\n   \"publication_date\": \"1998-01-01T00:00:00.000000Z\",\n   \"isbn\": \"9324897489415\",\n   \"author\": \"Cho Chang\"\n  },\n  {\n   \"id\": 3,\n   \"title\": \"Animais Fantásticos\",\n   \"publication_date\": \"1998-01-01T00:00:00.000000Z\",\n   \"isbn\": \"9324897489415\",\n   \"author\": \"Cho Chang\"\n  }\n ],\n \"status\": \"success\",\n \"message\": \"Students retrieved successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "localhost:8000/books",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 2|1v0PHwZXiDMdy5754SlWY10to9l4hptMvIsoEIr0"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/books",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "created / 201",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer 2|1v0PHwZXiDMdy5754SlWY10to9l4hptMvIsoEIr0"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL1}}/books",
+									"host": [
+										"{{baseURL1}}"
+									],
+									"path": [
+										"books"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.23.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Mar 2023 05:05:17 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"data\": {\n  \"id\": 4,\n  \"title\": \"Animais Fantásticos\",\n  \"publication_date\": \"13/01/1998\",\n  \"isbn\": \"9324897489415\",\n  \"author\": \"Cho Chang\"\n },\n \"status\": \"success\",\n \"message\": \"Book created successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "localhost:8000/books/3",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 2|1v0PHwZXiDMdy5754SlWY10to9l4hptMvIsoEIr0"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/books/3",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"books",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "created / 201",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer 2|1v0PHwZXiDMdy5754SlWY10to9l4hptMvIsoEIr0"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL1}}/books/3",
+									"host": [
+										"{{baseURL1}}"
+									],
+									"path": [
+										"books",
+										"3"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.23.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Mar 2023 05:05:29 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"data\": {\n  \"id\": 3,\n  \"title\": \"Animais Fantásticos\",\n  \"publication_date\": \"01/01/1998\",\n  \"isbn\": \"9324897489415\",\n  \"author\": \"Cho Chang\"\n },\n \"status\": \"success\",\n \"message\": \"Book found successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "localhost:8000/books/3",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 2|1v0PHwZXiDMdy5754SlWY10to9l4hptMvIsoEIr0"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/books/3",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"books",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "successfully / 200",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer 2|1v0PHwZXiDMdy5754SlWY10to9l4hptMvIsoEIr0"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL1}}/books/3",
+									"host": [
+										"{{baseURL1}}"
+									],
+									"path": [
+										"books",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.23.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Mar 2023 05:07:15 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"data\": {\n  \"id\": 3,\n  \"title\": \"Animais Fantásticos\",\n  \"publication_date\": \"01/01/1998\",\n  \"isbn\": \"9324897489415\",\n  \"author\": \"Cho Chang\"\n },\n \"status\": \"success\",\n \"message\": \"Book updated successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "localhost:8000/books/2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 2|1v0PHwZXiDMdy5754SlWY10to9l4hptMvIsoEIr0"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/books/2",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"books",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "successfully / 200",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer 2|1v0PHwZXiDMdy5754SlWY10to9l4hptMvIsoEIr0"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL1}}/books/2",
+									"host": [
+										"{{baseURL1}}"
+									],
+									"path": [
+										"books",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.23.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Mar 2023 05:08:04 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"data\": {\n  \"id\": 2,\n  \"title\": \"Animais Fantásticos\",\n  \"publication_date\": \"01/01/1998\",\n  \"isbn\": \"9324897489415\",\n  \"author\": \"Cho Chang\"\n },\n \"status\": \"success\",\n \"message\": \"Book deleted successfully\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL1",
+			"value": "http://localhost:8000",
+			"type": "any"
+		}
+	]
+}
