@@ -35,6 +35,7 @@ Gestão de livros
 - ~~Configurar Docker no projeto~~
 - Construir coleção do PostMan para testes
 - Criar testes automatizados
+- Criar documentação da API
 
 ## License
 
