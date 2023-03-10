@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\API\AuthController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,9 +14,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
-    return $request->user();
-});
+//Route::middleware(['auth:sanctum'])
+//    ->get(
+//        '/user',
+//        function (Request $request) {
+//            return $request->user();
+//        }
+//    );
 
-Route::post('/login', [\App\Http\Controllers\API\AuthController::class, 'login']);
-Route::middleware(['auth:sanctum'])->get('/logout', [\App\Http\Controllers\API\AuthController::class, 'logout']);
+Route::post(
+    '/login',
+    [AuthController::class, 'login']
+);
+
+Route::middleware(['auth:sanctum'])
+    ->get(
+        '/logout',
+        [AuthController::class, 'logout']
+    );
+
+Route::middleware(['auth:sanctum'])
+    ->prefix('/users')->group(function () {
+        require __DIR__.'/users.php';
+    });

@@ -25,7 +25,7 @@ Gestão de livros
 - Preparar o dockerfile e docker-compose.yml para esse projeto.
 
 ### TODO
-- Criar CRUD de Users
+- ~~Criar CRUD de Users~~
 - Criar CRUD de Books
 - Criar CRUD de Authors
 - ~~Configurar Docker no projeto~~

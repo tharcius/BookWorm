@@ -17,7 +17,7 @@ class AuthController extends Controller
 
         $credentials = $request->only('email', 'password');
 
-        if (!auth()->attempt($credentials)) {
+        if (! auth()->attempt($credentials)) {
             abort(401, 'Invalid credentials');
         }
 
@@ -25,8 +25,8 @@ class AuthController extends Controller
 
         return response()->json([
             'data' => [
-                'token' => auth()->user()->createToken('default')->plainTextToken
-            ]
+                'token' => auth()->user()->createToken('default')->plainTextToken,
+            ],
         ]);
     }
 
@@ -41,5 +41,4 @@ class AuthController extends Controller
     {
         auth()->user()->tokens()->delete();
     }
-
 }
