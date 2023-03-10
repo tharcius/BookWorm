@@ -7,7 +7,7 @@ use Illuminate\Http\JsonResponse;
 class IndexController extends AuthorController
 {
     /**
-     * Return an array with all Authors.
+     * List all Authors.
      */
     public function __invoke(): JsonResponse
     {

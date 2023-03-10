@@ -7,14 +7,26 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-# Book Manager
+# Book Worm
 
 ## Sobre o projeto 
-Gestão de livros
+Gestão de livros, vincula um livro com o seu escritor, criando um cadastro básico para ambos.
 
 ## Documentação
+Para acessar a documentação da API basta acessar a rota:
+
+/docs
 
 ### Rodando o projeto
+Caso for a primera execução, execute o comando:
+```shell
+docker-compose up -d --build
+```
+
+Se ja tiver executado o projeto antes, execute o comando:
+```shell
+docker-compose up -d
+```
 
 ### Testes/QA
 
@@ -27,6 +39,7 @@ Gestão de livros
 - Adicionado diagrama de banco de dados aos docs do projeto.
 - Criado CRUD de Authors.
 - Criado CRUD de Books.
+- Documentação da API gerado com Docblocks e com o Scribe
 
 ### TODO
 - ~~Criar CRUD de Users~~
@@ -35,7 +48,7 @@ Gestão de livros
 - ~~Configurar Docker no projeto~~
 - Construir coleção do PostMan para testes
 - Criar testes automatizados
-- Criar documentação da API
+- ~~Criar documentação da API~~
 
 ## License
 

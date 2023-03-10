@@ -36,7 +36,10 @@ services:
         image: composer
         volumes:
             - ./:/app
-        command: composer install
+        command:
+            - CMD
+            - composer install
+            - php artisan scribe:generate
     pontue.mariadb:
         container_name: pontue.mariadb
         image: 'mariadb:10'

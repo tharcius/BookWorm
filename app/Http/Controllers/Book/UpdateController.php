@@ -8,7 +8,7 @@ use Illuminate\Http\JsonResponse;
 class UpdateController extends BookController
 {
     /**
-     * Update an book.
+     * Update book information.
      */
     public function __invoke(UpdateRequest $data, $bookId): JsonResponse
     {

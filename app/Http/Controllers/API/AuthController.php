@@ -8,6 +8,9 @@ use Illuminate\Http\Request;
 
 class AuthController extends Controller
 {
+    /**
+     * @unauthenticated
+     */
     public function login(Request $request): JsonResponse
     {
         $request->validate([
@@ -18,7 +21,13 @@ class AuthController extends Controller
         $credentials = $request->only('email', 'password');
 
         if (! auth()->attempt($credentials)) {
-            abort(401, 'Invalid credentials');
+            return response()->json(
+                [
+                    'status' => 'error',
+                    'message' => 'Invalid credentials',
+                ],
+                self::HTTP_UNAUTHORIZED
+            );
         }
 
         $this->revokeTokens();

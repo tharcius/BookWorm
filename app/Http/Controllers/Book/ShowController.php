@@ -7,7 +7,7 @@ use Illuminate\Http\JsonResponse;
 class ShowController extends BookController
 {
     /**
-     * Return an book.
+     * Retrieve book information.
      */
     public function __invoke($bookId): JsonResponse
     {

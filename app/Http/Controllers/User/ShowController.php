@@ -7,7 +7,7 @@ use Illuminate\Http\JsonResponse;
 class ShowController extends UserController
 {
     /**
-     * Return a user.
+     * Retrieve user information.
      */
     public function __invoke($userId): JsonResponse
     {

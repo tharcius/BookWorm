@@ -7,7 +7,7 @@ use Illuminate\Http\JsonResponse;
 class ShowController extends AuthorController
 {
     /**
-     * Return an author.
+     * Retrieve author information.
      */
     public function __invoke($authorId): JsonResponse
     {

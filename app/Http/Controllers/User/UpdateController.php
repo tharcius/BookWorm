@@ -8,7 +8,7 @@ use Illuminate\Http\JsonResponse;
 class UpdateController extends UserController
 {
     /**
-     * Update a user.
+     * Update user information.
      */
     public function __invoke(UpdateRequest $data, $userId): JsonResponse
     {

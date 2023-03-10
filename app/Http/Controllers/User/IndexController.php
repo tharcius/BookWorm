@@ -7,7 +7,7 @@ use Illuminate\Http\JsonResponse;
 class IndexController extends UserController
 {
     /**
-     * Return an array with all Users.
+     * List all Users.
      */
     public function __invoke(): JsonResponse
     {

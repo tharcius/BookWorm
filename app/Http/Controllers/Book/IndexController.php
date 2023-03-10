@@ -7,7 +7,7 @@ use Illuminate\Http\JsonResponse;
 class IndexController extends BookController
 {
     /**
-     * Return an array with all Books.
+     * List all Books.
      */
     public function __invoke(): JsonResponse
     {

@@ -17,5 +17,7 @@ class Controller extends BaseController
 
     public const HTTP_NO_CONTENT_OK = 204;
 
+    public const HTTP_UNAUTHORIZED = 401;
+
     public const HTTP_UNPROCESSABLE_ENTITY = 422;
 }
