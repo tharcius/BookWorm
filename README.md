@@ -23,6 +23,9 @@ Gestão de livros
   Artisan Pint, PHPInsights.
 - Criando sistema de autenticação com o Sanctum.
 - Preparar o dockerfile e docker-compose.yml para esse projeto.
+- Criado CRUD de Users.
+- Adicionado diagrama de banco de dados aos docs do projeto.
+- Criado CRUD de Authors.
 
 ### TODO
 - ~~Criar CRUD de Users~~
