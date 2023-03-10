@@ -42,8 +42,6 @@ class AuthorRepository implements AuthorRepositoryInterface
 
     public function updateAuthor($data, $authorId): AuthorResource|false
     {
-        dd($data);
-
         try {
             $author = $this->author->findOrFail($authorId);
             $author->update($data);

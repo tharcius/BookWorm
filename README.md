@@ -26,11 +26,12 @@ Gestão de livros
 - Criado CRUD de Users.
 - Adicionado diagrama de banco de dados aos docs do projeto.
 - Criado CRUD de Authors.
+- Criado CRUD de Books.
 
 ### TODO
 - ~~Criar CRUD de Users~~
-- Criar CRUD de Books
-- Criar CRUD de Authors
+- ~~Criar CRUD de Books~~
+- ~~Criar CRUD de Authors~~
 - ~~Configurar Docker no projeto~~
 - Construir coleção do PostMan para testes
 - Criar testes automatizados

@@ -6,26 +6,27 @@ use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Author extends Model
+class Book extends Model
 {
     use HasFactory;
     use SoftDeletes;
 
     protected $fillable = [
-        'name',
-        'birthdate',
-        'nationality',
+        'title',
+        'publication_date',
+        'isbn',
+        'author_id',
     ];
 
     protected $casts = [
-        'birthdate' => 'date:d/m/Y',
+        'publication_date' => 'date:d/m/Y',
         'deleted_at' => 'datetime',
     ];
 
-    protected function birthdate(): Attribute
+    protected function publicationDate(): Attribute
     {
         return Attribute::make(
             get: fn (string $value) => Carbon::parse($value)->format('d/m/Y'),
@@ -33,8 +34,8 @@ class Author extends Model
         );
     }
 
-    protected function books(): HasMany
+    public function author(): BelongsTo
     {
-        return $this->hasMany(Book::class);
+        return $this->belongsTo(Author::class);
     }
 }

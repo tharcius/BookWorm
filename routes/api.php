@@ -42,3 +42,8 @@ Route::middleware(['auth:sanctum'])
     ->prefix('/authors')->group(function () {
         require __DIR__.'/authors.php';
     });
+
+Route::middleware(['auth:sanctum'])
+    ->prefix('/books')->group(function () {
+        require __DIR__.'/books.php';
+    });
