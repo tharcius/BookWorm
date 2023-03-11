@@ -36,6 +36,11 @@ docker exec -it pontue.laravel php artisan db:seed Admin
 ```
 
 ### Testes/QA
+Para executar os testes, basta executar:
+```shell
+docker exec -it pontue.laravel php artisan test
+```
+
 
 ### Roadmap
 - Preparando o ambiente de desenvolvimento instalando plugins uteis:
