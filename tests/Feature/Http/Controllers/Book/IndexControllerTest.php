@@ -1,8 +1,8 @@
 <?php
 
+use App\Models\Book;
 use App\Models\User;
 use Laravel\Sanctum\Sanctum;
-use App\Models\Book;
 
 it('should test return all books', function () {
     $user = User::factory()->create();

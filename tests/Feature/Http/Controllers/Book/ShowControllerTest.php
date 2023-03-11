@@ -24,6 +24,6 @@ test('should return book data', function () {
             'title' => $book->title,
             'publication_date' => $book->publication_date,
             'isbn' => $book->isbn,
-            'author' => $book->author->name
+            'author' => $book->author->name,
         ]);
 });

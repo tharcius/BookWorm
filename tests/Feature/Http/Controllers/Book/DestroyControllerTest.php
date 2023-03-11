@@ -21,7 +21,7 @@ it('deletes an book', function () {
             'title' => $book->title,
             'publication_date' => $book->publication_date,
             'isbn' => $book->isbn,
-            'author' => $book->author->name
+            'author' => $book->author->name,
         ],
         'status' => 'success',
         'message' => 'Book deleted successfully',

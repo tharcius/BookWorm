@@ -10,9 +10,9 @@ it('can create an author', function () {
 
     $response = $this->post('/authors', [
         'name' => 'Sirius Black III',
-            'birthdate' => '03/11/1959',
-            'nationality' => 'british',
-        ]
+        'birthdate' => '03/11/1959',
+        'nationality' => 'british',
+    ]
     );
 
     $authorId = $response->json()['data']['id'];

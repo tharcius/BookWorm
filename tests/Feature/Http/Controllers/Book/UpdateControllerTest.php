@@ -25,17 +25,17 @@ it('should update book data', function () {
             'title' => 'Animais Fantásticos e onde Habitam',
             'publication_date' => '13/07/1897',
             'isbn' => '9324897489415',
-            'author' => $book->author->name
+            'author' => $book->author->name,
         ],
         'status' => 'success',
         'message' => 'Book updated successfully',
     ]);
 
     $this->assertDatabaseHas('books', [
-        "id" => $book->id,
+        'id' => $book->id,
         'title' => 'Animais Fantásticos e onde Habitam',
         'publication_date' => '1897-07-13',
         'isbn' => '9324897489415',
-        'author_id' => $book->author_id
+        'author_id' => $book->author_id,
     ]);
 });

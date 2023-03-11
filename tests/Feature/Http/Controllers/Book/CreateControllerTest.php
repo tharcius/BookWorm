@@ -27,18 +27,17 @@ it('can create a book', function () {
                 'publication_date' => '13/07/1897',
                 'isbn' => '9324897489415',
                 'author' => $author->name,
-                'id' => $bookId
+                'id' => $bookId,
             ],
             'status' => 'success',
             'message' => 'Book created successfully',
         ]);
 
     $this->assertDatabaseHas('books', [
-        "id" => $bookId,
-        "title" => "Animais Fantásticos e onde Habitam",
-        "publication_date" => "1897-07-13",
-        "isbn" => "9324897489415",
-        "author_id" => $author->id,
+        'id' => $bookId,
+        'title' => 'Animais Fantásticos e onde Habitam',
+        'publication_date' => '1897-07-13',
+        'isbn' => '9324897489415',
+        'author_id' => $author->id,
     ]);
-
 });

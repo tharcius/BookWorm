@@ -11,7 +11,7 @@ it('should update author data', function () {
 
     $author = Author::factory()->create();
 
-    $response = $this->patch('/authors/' . $author->id, [
+    $response = $this->patch('/authors/'.$author->id, [
         'name' => 'Newton Artemis Fido Scamander',
         'birthdate' => '24/02/1887',
         'nationality' => 'british',

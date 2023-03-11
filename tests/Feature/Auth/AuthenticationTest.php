@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Hash;
 test('users can authenticate using the login screen', function () {
     $user = User::factory()->create(['password' => Hash::make('password')]);
 
-    $token = $this->post('/login', ['email' => $user->email, 'password' => 'password',])
+    $token = $this->post('/login', ['email' => $user->email, 'password' => 'password'])
         ->json()['data']['token'];
 
     $response = $this->head('/users', [
