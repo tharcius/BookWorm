@@ -30,7 +30,7 @@ class ShowController extends AuthorController
                 'status' => 'success',
                 'message' => 'Author found successfully',
             ],
-            self::HTTP_CREATE_OK
+            self::HTTP_OK
         );
     }
 }

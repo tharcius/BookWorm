@@ -1,17 +1,19 @@
 <?php
 
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 test('users can authenticate using the login screen', function () {
-    $user = User::factory()->create();
+    $user = User::factory()->create(['password' => Hash::make('password')]);
 
-    $response = $this->post('/login', [
-        'email' => $user->email,
-        'password' => 'password',
+    $token = $this->post('/login', ['email' => $user->email, 'password' => 'password'])
+        ->json()['data']['token'];
+
+    $response = $this->head('/users', [
+        'Authorization' => "Bearer {$token}",
     ]);
 
-    $this->assertAuthenticated();
-    $response->assertNoContent();
+    $response->assertStatus(200);
 });
 
 test('users can not authenticate with invalid password', function () {

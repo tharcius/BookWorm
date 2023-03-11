@@ -30,7 +30,7 @@ class ShowController extends BookController
                 'status' => 'success',
                 'message' => 'Book found successfully',
             ],
-            self::HTTP_CREATE_OK
+            self::HTTP_OK
         );
     }
 }
