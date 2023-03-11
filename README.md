@@ -48,6 +48,7 @@ docker exec -it pontue.laravel php artisan db:seed Admin
 - Criado CRUD de Books.
 - Documentação da API gerado com Docblocks e com o Scribe.
 - Criada coleção do Postman e do Insomnia na pasta Docs.
+- Teste criados e controllers ajustados
 
 ### TODO
 - ~~Criar CRUD de Users~~
@@ -55,8 +56,9 @@ docker exec -it pontue.laravel php artisan db:seed Admin
 - ~~Criar CRUD de Authors~~
 - ~~Configurar Docker no projeto~~
 - ~~Construir coleção do PostMan para testes~~
-- Criar testes automatizados
+- ~~Criar testes automatizados~~
 - ~~Criar documentação da API~~
+- Melhorar cobertura de testes
 
 ## License
 

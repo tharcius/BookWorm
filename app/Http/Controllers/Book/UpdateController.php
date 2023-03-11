@@ -12,7 +12,7 @@ class UpdateController extends BookController
      */
     public function __invoke(UpdateRequest $data, $bookId): JsonResponse
     {
-        $book = $this->repository->updateBook($data->only('name', 'birthdate', 'nationality'), $bookId);
+        $book = $this->repository->updateBook($data->only('title', 'publication_date', 'isbn'), $bookId);
 
         if (! $book) {
             return response()->json(

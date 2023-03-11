@@ -23,7 +23,7 @@ class CreateRequest extends FormRequest
     {
         return [
             'name' => 'required|string|min:6|max:60',
-            'birthdate' => 'required|date',
+            'birthdate' => 'required|date_format:d/m/Y',
             'nationality' => 'required|string|min:5|max:60',
         ];
     }

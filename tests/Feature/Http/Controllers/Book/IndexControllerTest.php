@@ -1,7 +1,23 @@
 <?php
 
-test('example', function () {
-    $response = $this->get('/');
+use App\Models\User;
+use Laravel\Sanctum\Sanctum;
+use App\Models\Book;
+
+it('should test return all books', function () {
+    $user = User::factory()->create();
+
+    Sanctum::actingAs($user);
+
+    $response = $this->get('/books');
 
     $response->assertStatus(200);
+
+    $response->assertJsonCount(0, 'data');
+
+    Book::factory(15)->create();
+
+    $response = $this->get('/books');
+
+    $response->assertJsonCount(15, 'data');
 });
